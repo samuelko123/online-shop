@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './components/App';
 
-const div = document.createElement("div");
-div.id = "root";
-document.body.appendChild(div);
+const container = document.createElement("div");
+container.id = "root";
+document.body.appendChild(container);
 
-const root = ReactDOM.createRoot(div);
+const root = ReactDOM.createRoot(container);
 root.render(<App />);
