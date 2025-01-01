@@ -40,6 +40,7 @@ export default [
     rules: {
       "@stylistic/comma-dangle": ["error", "always-multiline"],
       "@stylistic/quotes": ["error", "double"],
+      "@stylistic/jsx-quotes": ["error", "prefer-double"],
       "@stylistic/semi": ["error", "always"],
     },
   },
