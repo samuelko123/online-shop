@@ -1,10 +1,12 @@
 import React from 'react';
-import { Header } from './components/Header';
+import { Logo } from './components/Logo';
 
 export const App = () => {
   return (
     <>
-      <Header />
+      <header>
+        <Logo size={40} color='#ffffff' />
+      </header>
       <p>Hello, world!</p>
     </>
   );
