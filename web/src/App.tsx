@@ -1,5 +1,6 @@
-import React from 'react';
-import { Logo } from './components/Logo';
+import React from "react";
+
+import { Logo } from "./components/Logo";
 
 export const App = () => {
   return (
