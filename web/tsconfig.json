@@ -4,6 +4,10 @@
     "module": "es6",
     "jsx": "react",
     "strict": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "outDir": "./dist",
+  },
+  "include": [
+    "src/**/*"
+  ],
 }
