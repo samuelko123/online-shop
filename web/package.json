@@ -2,7 +2,7 @@
   "name": "online-shop",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --mode=production"
   },
   "dependencies": {
     "react": "^19.0.0",
