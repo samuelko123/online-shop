@@ -1,11 +1,13 @@
+import 'global.css';
+
 import React from 'react';
-import { Logo } from './components/Logo';
+import { Header } from './components/Header';
 
 export const App = () => {
   return (
-    <div>
-      <Logo size={40} color="#7cb06d"/>
+    <>
+      <Header />
       <p>Hello, world!</p>
-    </div>
+    </>
   );
 };
