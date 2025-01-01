@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 const App: React.FC = () => {
-    return <div>Hello, world!</div>;
+  return <div>Hello, world!</div>;
 };
 
 const div = document.createElement("div");
