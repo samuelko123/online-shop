@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Logo = ({ size, color }: { size: number, color: string }) => {
+export const Logo = ({ size }: { size: number }) => {
 	return (
 		<svg
-			fill={color}
+			fill="currentColor"
 			width={size}
 			height={size}
 			viewBox="0 0 495.398 495.398"

@@ -6,7 +6,7 @@ export const App = () => {
     <>
       <header>
         <a href="/" id="logo-link">
-          <Logo size={40} color='#ffffff' />
+          <Logo size={40} />
           <span>Online Shop</span>
         </a>
       </header>
