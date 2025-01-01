@@ -1,4 +1,11 @@
-<h1>Online Shop</h1>
+# Online Shop
 
-<p>It is a hobbyist project.</p>
-<p>The aim is to build a minimalistic and production-ready online shop.</p>
+It is a hobbyist project.
+
+The aim is to build a minimalistic and production-ready online shop.
+
+## Technologies
+
+- Typescript
+- React
+- Webpack
