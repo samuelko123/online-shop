@@ -6,8 +6,8 @@ export const App = () => {
     <>
       <header>
         <Logo size={40} color='#ffffff' />
+        <span>Online Shop</span>
       </header>
-      <p>Hello, world!</p>
     </>
   );
 };

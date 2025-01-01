@@ -1,4 +1,5 @@
 body {
+  font-family: Helvetica;
   margin: 0;
 }
 
@@ -9,6 +10,9 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 0.5rem;
 
-  background-color: #001080;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #001188;
 }
