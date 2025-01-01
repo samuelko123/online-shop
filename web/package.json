@@ -2,6 +2,7 @@
   "name": "online-shop",
   "license": "MIT",
   "scripts": {
+    "dev": "webpack serve --mode=development --open",
     "build": "webpack --mode=production"
   },
   "dependencies": {
