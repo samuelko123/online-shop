@@ -27,3 +27,8 @@ a {
   align-items: center;
   gap: 0.5rem;
 }
+
+#logo {
+  width: 3rem;
+  height: 3rem;
+}
