@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from './components/App';
+import { App } from './App';
+import './public/global.css';
 
 // create root container
 const container = document.createElement("div");
