@@ -9,7 +9,7 @@ export default [
     files: ["src/**/*.{ts,tsx}"],
   },
   {
-    ignores: ["dist/*", "webpack.config.js"],
+    ignores: ["dist/**/*", "webpack.config.js"],
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
