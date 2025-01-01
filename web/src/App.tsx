@@ -5,8 +5,10 @@ export const App = () => {
   return (
     <>
       <header>
-        <Logo size={40} color='#ffffff' />
-        <span>Online Shop</span>
+        <a href="/" id="logo-link">
+          <Logo size={40} color='#ffffff' />
+          <span>Online Shop</span>
+        </a>
       </header>
     </>
   );
