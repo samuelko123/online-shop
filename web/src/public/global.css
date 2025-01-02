@@ -35,23 +35,3 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 }
-
-button {
-  display: inline-block;
-  cursor: pointer;
-
-  width: 8rem;
-  height: 3rem;
-
-  color: #FFFFFF;
-  background-color: #001188;
-
-  border-style: none;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #0044bb;
-}

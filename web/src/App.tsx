@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Button } from "./components/atoms/Button";
 import { Header } from "./components/molecules/Header";
 
 export const App = () => {
@@ -10,7 +11,7 @@ export const App = () => {
         <div id="hero-container">
           <div>
             <h1>What are you waiting for?</h1>
-            <button>Shop now</button>
+            <Button>Shop now</Button>
           </div>
           <img src="/hero-image.svg" alt="image" />
         </div>
