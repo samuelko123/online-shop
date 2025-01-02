@@ -5,13 +5,10 @@ import ReactDOM from "react-dom/client";
 
 import { App } from "./App";
 
-// create root container
-const container = document.createElement("div");
-container.id = "root";
+const container = document.getElementById("root");
+if (!container) {
+  throw new Error("Cannot find 'root' container.");
+}
 
-// insert container into document body
-document.body.appendChild(container);
-
-// render React components into container
 const root = ReactDOM.createRoot(container);
 root.render(<App />);
