@@ -1,4 +1,17 @@
 .container {
-  padding: 0 1rem;
-  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem;
+}
+
+.product-container {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
