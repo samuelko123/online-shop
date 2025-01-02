@@ -9,9 +9,9 @@
 }
 
 .product-container {
-  width: 100%;
+  width: calc(240px * 4 + 3rem);
 
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
 }
