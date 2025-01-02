@@ -10,7 +10,7 @@ export const ProductListingPage = () => {
       <Header />
       <main className={classes.container}>
         <h1>Products</h1>
-        <div className={classes["product-container"]}>
+        <ul className={classes["product-list"]}>
           <ProductTile
             name="Something Good For Your Ears And Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             price={1.23}
@@ -60,7 +60,7 @@ export const ProductListingPage = () => {
               src: "/assets/product.png",
             }}
           />
-        </div>
+        </ul>
       </main>
     </>
   );

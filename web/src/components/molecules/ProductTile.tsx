@@ -15,12 +15,12 @@ export const ProductTile = ({
   }
 }) => {
   return (
-    <div className={classes.container}>
+    <li className={classes.container}>
       <img className={classes.image} src={image.src} alt="product image" />
       <div className={classes.detail}>
         <p className={classes.name}>{name}</p>
         <Price value={price} />
       </div>
-    </div>
+    </li>
   );
 };
