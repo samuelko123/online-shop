@@ -13,11 +13,11 @@ export const App = () => {
       </header>
       <main>
         <div id="hero-container">
-          <div id="hero-message">
+          <div>
             <h1>What are you waiting for?</h1>
             <button>Shop now</button>
           </div>
-          <img id="hero-image" src="/hero-image.svg" alt="image" />
+          <img src="/hero-image.svg" alt="image" />
         </div>
       </main>
     </>
