@@ -5,4 +5,5 @@ export default {
   server: {
     port: 3000,
   },
+  publicDir: "./src/assets",
 } satisfies UserConfig;

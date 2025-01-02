@@ -13,7 +13,7 @@ export const HeroSection = () => {
           <Link to="/products">Shop now</Link>
         </Button>
       </div>
-      <img src="/hero-image.svg" alt="image" />
+      <img src="/assets/hero-image.svg" alt="image" />
     </section>
   );
 };
