@@ -2,9 +2,9 @@
   "name": "online-shop",
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
     "lint": "eslint --fix",
-    "build": "webpack --mode=production"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "react": "^19.0.0",
