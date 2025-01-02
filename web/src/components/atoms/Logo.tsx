@@ -1,11 +1,11 @@
 import React from "react";
 
-import * as styles from "./Logo.module.css";
+import classes from "./Logo.module.css";
 
 export const Logo = () => {
 	return (
 		<svg
-			className={styles.logo}
+			className={classes.logo}
 			fill="currentColor"
 			viewBox="0 0 495.398 495.398"
 		>

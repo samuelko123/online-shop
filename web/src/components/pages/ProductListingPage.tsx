@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Header } from "../molecules/Header";
-import * as styles from "./ProductListingPage.module.css";
+import classes from "./ProductListingPage.module.css";
 
 export const ProductListingPage = () => {
   return (
     <>
       <Header />
-      <main className={styles.container}>
+      <main className={classes.container}>
         <p>Products will be coming soon.</p>
       </main>
     </>
