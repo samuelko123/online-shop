@@ -30,11 +30,6 @@ a {
   font-size: 1.25rem;
 }
 
-#logo {
-  width: 3rem;
-  height: 3rem;
-}
-
 main {
   height: calc(100vh - 4rem);
 
