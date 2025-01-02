@@ -1,12 +1,12 @@
 import React from "react";
 
 import { Logo } from "../atoms/Logo";
-import * as styles from "./Header.module.css";
+import classes from "./Header.module.css";
 
 export const Header = () => {
   return (
-    <header className={styles.container}>
-      <a href="/" className={styles.link}>
+    <header className={classes.container}>
+      <a href="/" className={classes.link}>
         <Logo />
         <span>Online Shop</span>
       </a>
