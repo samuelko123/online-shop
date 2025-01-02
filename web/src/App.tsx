@@ -1,16 +1,11 @@
 import React from "react";
 
-import { Logo } from "./components/atoms/Logo";
+import { Header } from "./components/molecules/Header";
 
 export const App = () => {
   return (
     <>
-      <header>
-        <a href="/" id="logo-link">
-          <Logo />
-          <span>Online Shop</span>
-        </a>
-      </header>
+      <Header />
       <main>
         <div id="hero-container">
           <div>
