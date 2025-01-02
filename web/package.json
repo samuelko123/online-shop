@@ -5,6 +5,7 @@
     "lint": "eslint --fix",
     "dev": "vite",
     "build": "vite build",
+    "prepreview": "npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
