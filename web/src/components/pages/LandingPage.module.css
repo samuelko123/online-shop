@@ -1,0 +1,14 @@
+.container {
+  height: calc(100vh - 4rem);
+
+  margin: auto;
+  padding: 0 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media(min-width: 1024px) {
+    align-items: center;
+  }
+}
