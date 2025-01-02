@@ -12,3 +12,4 @@ The aim is to build a minimalistic and production-ready online shop.
 - React
 - Webpack
 - ESLint
+- CSS Modules
