@@ -9,9 +9,15 @@
 }
 
 .product-container {
-  width: calc(240px * 4 + 3rem);
+  width: calc(240px * 2 + 1rem);
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+
   gap: 1rem;
+
+  @media(min-width: 1024px) {
+    width: calc(240px * 4 + 3rem);
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
