@@ -28,4 +28,4 @@ jobs:
 
       - name: Push Docker images
         run: |
-          docker compose --file ./infra/docker/docker-compose.yaml push
+          docker compose --file ./infra/docker/docker-compose.yaml push app
