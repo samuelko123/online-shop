@@ -1,6 +1,8 @@
 import React from "react";
 
+import { PRODUCTS } from "../../data/products";
 import { Header } from "../molecules/Header";
+import { ProductList } from "../molecules/ProductList";
 import classes from "./ProductListingPage.module.css";
 
 export const ProductListingPage = () => {
@@ -8,7 +10,8 @@ export const ProductListingPage = () => {
     <>
       <Header />
       <main className={classes.container}>
-        <p>Products will be coming soon.</p>
+        <h1>Products</h1>
+        <ProductList products={PRODUCTS} />
       </main>
     </>
   );
