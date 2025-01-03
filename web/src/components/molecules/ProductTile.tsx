@@ -1,19 +1,20 @@
 import React from "react";
 
+import { Product } from "../../types/Product";
 import { Price } from "../atoms/Price";
 import classes from "./ProductTile.module.css";
 
 export const ProductTile = ({
-  name,
-  price,
-  image,
+  product,
 }: {
-  name: string,
-  price: number,
-  image: {
-    src: string,
-  }
+  product: Product
 }) => {
+  const {
+    name,
+    price,
+    image,
+  } = product;
+
   return (
     <li className={classes.container}>
       <img className={classes.image} src={image.src} alt="product image" />
