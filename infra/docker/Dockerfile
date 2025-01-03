@@ -16,8 +16,11 @@ RUN dotnet publish --configuration Release /app/src/OnlineShop --output ./bin --
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS production
 
-# copy executable from previous stage
+# copy executable from build stage
 COPY --from=base /app/bin /app/bin
+
+# copy static web content from web image
+COPY --from=online-shop-web /app/dist /app/bin/wwwroot
 
 # run executable as non-root user
 WORKDIR /app/bin

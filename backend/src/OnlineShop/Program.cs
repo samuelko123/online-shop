@@ -12,6 +12,10 @@ internal class Program
 
     var app = builder.Build();
     app.MapHealthChecks("/api/healthcheck");
+    app.UseDefaultFiles();
+    app.UseStaticFiles();
+    app.UseSpa(spa => { });
+
     app.Run();
   }
 }

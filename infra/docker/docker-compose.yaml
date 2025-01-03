@@ -1,7 +1,15 @@
 name: online-shop
 services:
+  web:
+    container_name: web
+    image: online-shop-web
+    build:
+      context: ../../web/
+      dockerfile: ../infra/docker/web.Dockerfile
   app:
-    container_name: online-shop-app
+    container_name: app
+    depends_on:
+      - web
     build:
       context: ../../backend/
       dockerfile: ../infra/docker/Dockerfile
