@@ -8,6 +8,7 @@ services:
       dockerfile: ../infra/docker/web.Dockerfile
   app:
     container_name: app
+    image: samuelko123/online-shop-app:latest
     depends_on:
       - web
     build:
