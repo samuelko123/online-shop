@@ -1,0 +1,27 @@
+name: online-shop
+services:
+  web:
+    container_name: web
+    image: online-shop-web
+    build:
+      context: ../../web/
+      dockerfile: ../infra/docker/web.Dockerfile
+  app:
+    container_name: app
+    depends_on:
+      - web
+    build:
+      context: ../../backend/
+      dockerfile: ../infra/docker/app.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_HTTP_PORTS: 5000
+    ports:
+      - app_protocol: http
+        target: 5000
+        published: 5000
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:5000/api/healthcheck" ]
+      interval: 5m
+      start_period: 30s
+      start_interval: 1s
