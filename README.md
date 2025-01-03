@@ -9,6 +9,7 @@ The aim is to build a minimalistic and production-ready online shop.
 - Product Listing Page
 
 ## Technologies
+- Github Workflow
 - Docker
 - ASP.NET
 - Typescript
