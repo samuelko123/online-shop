@@ -12,7 +12,7 @@ services:
       - web
     build:
       context: ../../backend/
-      dockerfile: ../infra/docker/Dockerfile
+      dockerfile: ../infra/docker/app.Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ASPNETCORE_HTTP_PORTS: 5000
