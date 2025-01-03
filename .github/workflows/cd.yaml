@@ -1,0 +1,12 @@
+name: Pull Request Merged
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  publish-docker-images:
+    name: Publish Docker Images
+    uses: ./.github/workflows/publish-docker-images.yaml
+    secrets: inherit
