@@ -1,6 +1,7 @@
+name: online-shop
 services:
   app:
-    container_name: app
+    container_name: online-shop-app
     build:
       context: ../../backend/
       dockerfile: ../infra/docker/Dockerfile
