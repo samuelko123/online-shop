@@ -2,7 +2,7 @@ import React from "react";
 
 import { PRODUCTS } from "../../data/products";
 import { Header } from "../molecules/Header";
-import { ProductTile } from "../molecules/ProductTile";
+import { ProductList } from "../molecules/ProductList";
 import classes from "./ProductListingPage.module.css";
 
 export const ProductListingPage = () => {
@@ -11,15 +11,7 @@ export const ProductListingPage = () => {
       <Header />
       <main className={classes.container}>
         <h1>Products</h1>
-        <ul className={classes["product-list"]}>
-          <ProductTile product={PRODUCTS[0]} />
-          <ProductTile product={PRODUCTS[1]} />
-          <ProductTile product={PRODUCTS[2]} />
-          <ProductTile product={PRODUCTS[3]} />
-          <ProductTile product={PRODUCTS[4]} />
-          <ProductTile product={PRODUCTS[5]} />
-          <ProductTile product={PRODUCTS[6]} />
-        </ul>
+        <ProductList products={PRODUCTS} />
       </main>
     </>
   );
