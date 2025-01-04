@@ -9,8 +9,10 @@ The aim is to build a minimalistic and production-ready online shop.
 - Product Listing Page
 
 ## Technologies
+- Terraform
 - Github Workflow
 - Docker
+- Powershell
 - ASP.NET
 - Typescript
 - React
@@ -21,12 +23,14 @@ The aim is to build a minimalistic and production-ready online shop.
 
 ## How to Run
 
-```
-docker compose --file ./infra/docker/docker-compose.yaml up --build
-```
+| Command               | Description                                                                             |
+| ----------------------| --------------------------------------------------------------------------------------- |
+| `./run.ps1 prod`      | Start Docker containers in production mode.                                             |
+| `./run.ps1 stop`      | Stop Docker containers.                                                                 |
+| `./run.ps1 uninstall` | Remove all Docker resources related to this project.                                    |
 
-Then, go to http://localhost:5000/
+`prod` is hosted on http://localhost:5000.
 
 ## More Documentations
 
-[DevOps Infrastructure](./infra/README.md)
+- [DevOps Infrastructure](./infra/README.md)
