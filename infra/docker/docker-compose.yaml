@@ -6,12 +6,14 @@ services:
     build:
       context: ../../web/
       dockerfile: ../infra/docker/web.Dockerfile
+      target: production
   app:
     container_name: app
     image: samuelko123/online-shop-app:latest
     build:
       context: ../../backend/
       dockerfile: ../infra/docker/app.Dockerfile
+      target: production
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ASPNETCORE_HTTP_PORTS: 5000

@@ -1,7 +1,7 @@
 #!pwsh
 param(
   [Parameter(Position = 0, Mandatory = $true)]
-  [ValidateSet("prod", "stop", "uninstall")]
+  [ValidateSet("dev", "prod", "stop", "uninstall")]
   [string]$profile
 )
 
@@ -13,6 +13,11 @@ function RunCommand([string]$command) {
 
 $compose = "docker compose --file ./infra/docker/docker-compose.yaml"
 switch ($profile) {
+  "dev" {
+    $compose += " --file ./infra/docker/docker-compose.dev.yaml"
+    RunCommand("$compose down --rmi all --remove-orphans")
+    RunCommand("$compose up --build --detach")
+  }
   "prod" {
     RunCommand("$compose down --rmi all --remove-orphans")
     RunCommand("$compose build web")

@@ -29,6 +29,7 @@ The aim is to build a minimalistic and production-ready online shop.
 
 | Command               | Description                                                                             |
 | ----------------------| --------------------------------------------------------------------------------------- |
+| `./run.ps1 dev`       | Start Docker containers in development mode, with Hot Module Replacement enabled.       |
 | `./run.ps1 prod`      | Start Docker containers in production mode.                                             |
 | `./run.ps1 stop`      | Stop Docker containers.                                                                 |
 | `./run.ps1 uninstall` | Remove all Docker resources related to this project.                                    |
