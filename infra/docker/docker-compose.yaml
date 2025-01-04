@@ -2,7 +2,6 @@ name: online-shop
 services:
   web:
     container_name: web
-    hostname: web
     image: online-shop-web
     build:
       context: ../../web/
