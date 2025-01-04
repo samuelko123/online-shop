@@ -7,6 +7,9 @@ COPY src/*/*.csproj .
 RUN for file in $(ls *.csproj); do mkdir -p src/${file%.*}/ && mv $file src/${file%.*}/; done
 RUN dotnet restore
 
+# copy source files
+COPY ./src ./src
+
 ################################################
 
 FROM base AS development
@@ -15,7 +18,7 @@ ENTRYPOINT ["dotnet", "watch", "run", "--project", "/app/src/OnlineShop"]
 ################################################
 
 FROM base AS build
-COPY ./src ./src
+RUN dotnet build --configuration Release --no-restore
 RUN dotnet build --configuration Release --no-restore
 RUN dotnet publish --configuration Release /app/src/OnlineShop --output ./bin --no-build
 
