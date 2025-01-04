@@ -12,6 +12,7 @@ services:
     build:
       context: ../../backend/
       dockerfile: ../infra/docker/app.Dockerfile
+      target: production
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ASPNETCORE_HTTP_PORTS: 5000

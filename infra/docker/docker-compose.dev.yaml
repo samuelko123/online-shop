@@ -1,0 +1,7 @@
+services:
+  app:
+    container_name: app-dev
+    build:
+      target: development
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

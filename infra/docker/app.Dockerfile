@@ -7,7 +7,14 @@ COPY src/*/*.csproj .
 RUN for file in $(ls *.csproj); do mkdir -p src/${file%.*}/ && mv $file src/${file%.*}/; done
 RUN dotnet restore
 
-# build executable
+################################################
+
+FROM base AS development
+ENTRYPOINT ["dotnet", "watch", "run", "--project", "/app/src/OnlineShop"]
+
+################################################
+
+FROM base AS build
 COPY ./src ./src
 RUN dotnet build --configuration Release --no-restore
 RUN dotnet publish --configuration Release /app/src/OnlineShop --output ./bin --no-build
@@ -17,7 +24,7 @@ RUN dotnet publish --configuration Release /app/src/OnlineShop --output ./bin --
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS production
 
 # copy executable from build stage
-COPY --from=base /app/bin /app/bin
+COPY --from=build /app/bin /app/bin
 
 # copy static web content from web image
 COPY --from=online-shop-web /app/dist /app/bin/wwwroot
