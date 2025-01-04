@@ -19,7 +19,6 @@ ENTRYPOINT ["dotnet", "watch", "run", "--project", "/app/src/OnlineShop"]
 
 FROM base AS build
 RUN dotnet build --configuration Release --no-restore
-RUN dotnet build --configuration Release --no-restore
 RUN dotnet publish --configuration Release /app/src/OnlineShop --output ./bin --no-build
 
 ################################################
