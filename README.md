@@ -9,17 +9,21 @@ The aim is to build a minimalistic and production-ready online shop.
 - Product Listing Page
 
 ## Technologies
-- Terraform
-- Github Workflow
-- Docker
-- Powershell
-- ASP.NET
-- Typescript
-- React
-- React Router
-- Vite
-- ESLint
-- CSS Modules
+- DevOps
+  - Docker
+  - Github Workflow
+  - Terraform
+  - Webhook
+  - Powershell
+- Backend
+  - ASP.NET
+- Frontend
+  - Typescript
+  - React
+  - React Router
+  - Vite
+  - ESLint
+  - CSS Modules
 
 ## How to Run
 
