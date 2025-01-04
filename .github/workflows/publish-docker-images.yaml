@@ -24,7 +24,8 @@ jobs:
 
       - name: Build Docker images
         run: |
-          docker compose --file ./infra/docker/docker-compose.yaml build
+          docker compose --file ./infra/docker/docker-compose.yaml build web
+          docker compose --file ./infra/docker/docker-compose.yaml build app
 
       - name: Push Docker images
         run: |
