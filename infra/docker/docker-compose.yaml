@@ -9,8 +9,6 @@ services:
   app:
     container_name: app
     image: samuelko123/online-shop-app:latest
-    depends_on:
-      - web
     build:
       context: ../../backend/
       dockerfile: ../infra/docker/app.Dockerfile
