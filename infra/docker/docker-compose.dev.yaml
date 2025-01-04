@@ -1,7 +1,23 @@
 services:
+  web:
+    container_name: web-dev
+    build:
+      target: development
+    volumes:
+      - type: bind
+        source: ../../web/src
+        target: /app/src
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:3000/" ]
+      interval: 5m
+      start_period: 30s
+      start_interval: 1s
+
   app:
     container_name: app-dev
     build:
       target: development
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+    depends_on:
+      - web

@@ -5,6 +5,11 @@ WORKDIR /app
 COPY package*.json .
 RUN npm ci
 
-# build web application
+# copy source files
 COPY . .
+
+FROM base AS development
+ENTRYPOINT ["npm", "run", "dev"]
+
+FROM base AS production
 RUN npm run build
