@@ -15,9 +15,22 @@ services:
 
   app:
     container_name: app-dev
+    depends_on:
+      - web
     build:
       target: development
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-    depends_on:
-      - web
+    volumes:
+      - type: bind
+        source: ../../backend/src
+        target: /app/src
+      - type: volume
+        source: app-bin
+        target: /app/src/OnlineShop/bin
+      - type: volume
+        source: app-obj
+        target: /app/src/OnlineShop/obj
+volumes:
+  app-bin:
+  app-obj:
