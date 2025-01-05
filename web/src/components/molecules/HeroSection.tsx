@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router";
 
 import heroImageUrl from "../../assets/hero-image.svg";
-import { Button } from "../atoms/Button";
+import { ButtonLink } from "./ButtonLink";
 import classes from "./HeroSection.module.css";
 
 export const HeroSection = () => {
@@ -10,9 +9,7 @@ export const HeroSection = () => {
     <section className={classes.container}>
       <div>
         <h1>What are you waiting for?</h1>
-        <Button>
-          <Link to="/products">Shop now</Link>
-        </Button>
+        <ButtonLink href="/products">Shop now</ButtonLink>
       </div>
       <img src={heroImageUrl} alt="image" />
     </section>
