@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test("When I click the CTA link, I will be redirected to the Product Listing Page.", async ({ page }) => {
   // Arrange
-  await page.goto('http://localhost:5000');
+  await page.goto('http://app:5000');
   await expect(page).toHaveTitle("Online Shop");
 
   // Act

@@ -6,21 +6,9 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   reporter: 'html',
   use: {
+    browserName: "webkit",
     trace: 'on-first-retry',
+    headless: true,
+    ignoreHTTPSErrors: true,
   },
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-  ],
 });

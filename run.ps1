@@ -1,7 +1,7 @@
 #!pwsh
 param(
   [Parameter(Position = 0, Mandatory = $true)]
-  [ValidateSet("dev", "prod", "stop", "uninstall")]
+  [ValidateSet("dev", "prod", "e2e", "stop", "uninstall")]
   [string]$profile
 )
 
@@ -23,6 +23,12 @@ switch ($profile) {
     RunCommand("$compose build web")
     RunCommand("$compose build app")
     RunCommand("$compose up --detach")
+  }
+  "e2e" {
+    $compose += " --file ./infra/docker/docker-compose.e2e.yaml"
+    RunCommand("$compose build web")
+    RunCommand("$compose build app")
+    RunCommand("$compose up --build --detach")
   }
   "stop" {
     RunCommand("$compose stop")
