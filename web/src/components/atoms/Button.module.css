@@ -1,9 +1,11 @@
 .button {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 
-  width: 8rem;
-  height: 3rem;
+  min-width: 8rem;
+  padding: 0.5rem 1rem;
 
   color: #FFFFFF;
   background-color: #001188;
