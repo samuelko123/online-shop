@@ -12,7 +12,7 @@ export const HeroSection = () => {
     <section className={classes.container}>
       <div>
         <h1>What are you waiting for?</h1>
-        <Button onClick={() => nagivate("/products")}>Shop now</Button>
+        <Button onClick={() => nagivate("/products")}>Shop now or it will be too late</Button>
       </div>
       <img src={heroImageUrl} alt="image" />
     </section>
