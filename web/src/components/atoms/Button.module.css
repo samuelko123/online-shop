@@ -1,8 +1,11 @@
 .button {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 
-  width: 8rem;
+  padding: 1rem;
+  min-width: 8rem;
   height: 3rem;
 
   color: #FFFFFF;
