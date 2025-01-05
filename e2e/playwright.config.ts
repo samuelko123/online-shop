@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  reporter: 'html',
+  reporter: [['html', { open: 'never' }]],
   use: {
     browserName: "webkit",
     trace: 'on-first-retry',
