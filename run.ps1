@@ -26,9 +26,9 @@ switch ($profile) {
   }
   "e2e" {
     $compose += " --file ./infra/docker/docker-compose.e2e.yaml"
+    RunCommand("$compose down --rmi all --remove-orphans")
     RunCommand("$compose build web")
-    RunCommand("$compose build app")
-    RunCommand("$compose up --build --detach")
+    RunCommand("$compose up e2e --build")
   }
   "stop" {
     RunCommand("$compose stop")
