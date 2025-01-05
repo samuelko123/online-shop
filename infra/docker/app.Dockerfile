@@ -3,9 +3,8 @@ WORKDIR /app
 
 # install dependencies
 COPY *.sln ./
-COPY src/*/*.csproj .
-RUN for file in $(ls *.csproj); do mkdir -p src/${file%.*}/ && mv $file src/${file%.*}/; done
-RUN dotnet restore
+COPY ./src/OnlineShop/OnlineShop.csproj ./src/OnlineShop/OnlineShop.csproj
+RUN dotnet restore ./src/OnlineShop
 
 # copy source files
 COPY ./src ./src
@@ -18,8 +17,8 @@ ENTRYPOINT ["dotnet", "watch", "run", "--project", "/app/src/OnlineShop"]
 ################################################
 
 FROM base AS build
-RUN dotnet build --configuration Release --no-restore
-RUN dotnet publish --configuration Release /app/src/OnlineShop --output ./bin --no-build
+RUN dotnet build --configuration Release ./src/OnlineShop --no-restore
+RUN dotnet publish --configuration Release ./src/OnlineShop --output ./bin --no-build
 
 ################################################
 
