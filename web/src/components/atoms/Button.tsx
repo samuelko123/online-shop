@@ -1,11 +1,9 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 import classes from "./Button.module.css";
 
-export const Button = ({ children }: { children: ReactNode }) => {
+export const Button = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
-    <button className={classes.button}>
-      {children}
-    </button>
+    <button className={classes.button} {...props} />
   );
 };
