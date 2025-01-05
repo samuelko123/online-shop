@@ -37,7 +37,7 @@ The aim is to build a minimalistic and production-ready online shop.
 | `./run.ps1 stop`      | Stop Docker containers.                                                                 |
 | `./run.ps1 uninstall` | Remove all Docker resources related to this project.                                    |
 
-Both `dev` and `prod` is hosted on http://localhost:5000.
+Both `dev` and `prod` are hosted on http://localhost:5000.
 
 ## More Documentations
 
