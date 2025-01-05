@@ -1,0 +1,21 @@
+name: End-To-End Tests
+
+on:
+  workflow_call:
+
+jobs:
+  docker-compose-up:
+    name: End-To-End Test
+    runs-on: ubuntu-24.04
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Run end-to-end tests
+        shell: pwsh
+        run: |
+          ./run.ps1 e2e

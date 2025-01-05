@@ -1,0 +1,8 @@
+services:
+  e2e:
+    container_name: e2e
+    depends_on:
+      - app
+    build:
+      context: ../../e2e/
+      dockerfile: ../infra/docker/e2e.Dockerfile
