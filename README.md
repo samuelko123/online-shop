@@ -24,6 +24,8 @@ The aim is to build a minimalistic and production-ready online shop.
   - Vite
   - ESLint
   - CSS Modules
+- Testing
+  - Playwright
 
 ## How to Run
 
